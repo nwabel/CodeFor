@@ -20,7 +20,6 @@ Code Fun adalah project dari kelompok CGN-CJR-SKB yang beranggotakan:
 - Yosi Arbilla       (1303210159)
 - Zaghi Haekal N     (1303213001)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## Kontak Kami
 link
