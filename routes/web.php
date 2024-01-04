@@ -28,6 +28,17 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboardadmin', function () {
+    return Inertia::render('AdminDashboard');
+})->middleware(['auth', 'verified'])->name('dashboardadmin');
+
+Route::get('/dashboardforums', function(){
+    return Inertia::render('ForumDashboard');
+});
 
 Route::get('/blogpage', function(){
     return Inertia::render('BlogPage');
@@ -41,35 +52,18 @@ Route::get('/ourteam', function(){
     return Inertia::render('OurTeam');
 });
 
-
-// Route::get('/forums', function(){
-//     return Inertia::render('Forums');
-// });
+Route::get('/roadmap', function(){
+    return Inertia::render('RoadMap');
+});
 
 Route::post('/forum', [ForumController::class, 'storeForum']);
 
 Route::get('/forums', [ForumController::class, 'index']);
 
-// Route::get('/dashboardforums', [ForumController::class, 'showMine']);
-
-Route::get('/dashboardforums', function(){
-    return Inertia::render('ForumDashboard');
-});
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
-Route::get('/dashboardadmin', function () {
-    return Inertia::render('AdminDashboard');
-})->middleware(['auth', 'verified'])->name('dashboardadmin');
-
 Route::get('/kompe', [KompetisiController::class, 'index']);
 
-
-
 Route::get('/home',[AccController::class, 'index'])->middleware('auth')->name('home');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

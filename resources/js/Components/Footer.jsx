@@ -1,5 +1,4 @@
 import { Head, Link } from "@inertiajs/react";
-import CodeFor from "C:/Users/nabil/Desktop/CodeFor/resources/js/Components/Footer/CodeFor.png";
 const Footer = () => {
     return (
         <>
@@ -7,7 +6,7 @@ const Footer = () => {
                 <div className="max-w-7xl px-2 pb-6 pt-16 sm:px-6 lg:px-8 xl:ms-32">
                     <div className="lg:flex lg:items-center lg:justify-between">
                         <div className="flex justify-center sm:justify-start">
-                            <span className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Code Fun.</span>
+                            <span className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">CodeFun.</span>
                         </div>
 
                         <p className="mt-4 max-w-md text-center leading-relaxed text-gray-500 sm:text-left lg:mt-0">
@@ -37,8 +36,6 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        
-
                         <div className="text-center sm:text-left">
                             <p className="text-lg font-medium text-gray-900">Helpful Links</p>
 
@@ -48,27 +45,30 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="text-center sm:text-left md:col-span-4 lg:col-span-2">
-                            <p className="text-lg font-medium text-gray-900">Stay in Touch</p>
+                        <div className="text-center sm:text-left">
+                            <p className="text-lg font-medium text-gray-900"></p>
+                            <ul className="mt-8 space-y-4 text-sm">
+                                <li><a className="text-gray-700 transition hover:text-gray-700/75" href="/"></a></li>
+                                <li><a className="text-gray-700 transition hover:text-gray-700/75" href="/"></a></li>
+                                <li><a className="text-gray-700 transition hover:text-gray-700/75" href="/"></a></li>
+                                <li><a className="text-gray-700 transition hover:text-gray-700/75" href="/"></a></li>
+                            </ul>
+                        </div>
 
-                            <div className="mx-auto mt-8 max-w-md sm:ms-0">
-                                <p className="text-center leading-relaxed text-gray-500 ltr:sm:text-left rtl:sm:text-right">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum id, iure consectetur et
-                                    error hic!
+                        <div className="items-end text-center sm:text-left md:col-span-4 lg:col-span-2">
+                            <p className="text-lg font-medium text-gray-900">CodeFun Space</p>
+
+                            <div className="mx-auto max-w-md sm:ms-0">
+                                <p className="text-start leading-relaxed text-gray-500 ltr:sm:text-left rtl:sm:text-right">
+                                Closed temporarily due to Covid-19
                                 </p>
+                            </div>
+                            <p className="text-lg font-medium mt-8 text-gray-900">CodeFun Office</p>
 
-                                <form className="mt-4">
-                                    <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-start">
-                                        <label for="email" className="sr-only">Email</label>
-                                        <div className="w-full">
-                                            <label for="hero-input" className="sr-only">Search</label>
-                                            <input type="text" id="hero-input" name="hero-input" className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Masukkan email"></input>
-                                        </div>
-                                        <a className="w-full sm:w-auto whitespace-nowrap py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white bg-gradient-to-r from-blue-500 to-teal-400 hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                                            Berlangganan
-                                        </a>
-                                    </div>
-                                </form>
+                            <div className="mx-auto max-w-md sm:ms-0">
+                                <p className="text-start leading-relaxed text-gray-500 ltr:sm:text-left rtl:sm:text-right">
+                                Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+import ApplicationLogo from '@/Components/MustIncluded/ApplicationLogo';
+import Dropdown from '@/Components/MustIncluded/Dropdown';
+import NavLink from '@/Components/MustIncluded/NavLink';
+import ResponsiveNavLink from '@/Components/MustIncluded/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 
 export default function Authenticated({ user, header, children }) {
@@ -16,7 +16,7 @@ export default function Authenticated({ user, header, children }) {
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
                                 <Link href="/">
-                                    <span className="text-3xl font-semibold mb-11 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Code Fun.</span>
+                                    <span className="text-3xl font-semibold mb-11 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">CodeFun.</span>
                                 </Link>
                             </div>
 

@@ -41,7 +41,7 @@ const NewCard = () => {
                         <div class="flex py-3">
                             <a
                                 class="w-full text-center bg-gradient-to-r from-blue-500 to-teal-400 px-4 py-1.5 text-white rounded-md flex items-center gap-1 justify-center hover:bg-green-300"
-                                href="/account/threads/create"
+                                href="/dashboardforums"
                             ><svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"

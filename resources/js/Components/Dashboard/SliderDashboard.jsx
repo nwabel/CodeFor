@@ -4,8 +4,8 @@ export default function SliderDashboard() {
     return (
         <>
             <body>
-                <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 bg-cover w-max-w-7xl">
-                    <Carousel slideInterval={5000}>
+                <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 bg-cover max-w-7xl">
+                    <Carousel slideInterval={2000}>
                         <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210125191729/Google%E2%80%99s-Coding-Competitions-You-Can-Consider-in-2021.png" alt="..." />
                         <img src="https://files.codingninjas.in/article_images/codingcompetitionblog-23489.webp" alt="..." />
                         <img src="https://res.cloudinary.com/getlinksdesigner/image/upload/v1605605404/Blog/TCC_Media_press_Blog-cover_01_ipmgbw.png" alt="..." />

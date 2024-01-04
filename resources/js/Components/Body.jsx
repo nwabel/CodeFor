@@ -1,6 +1,6 @@
 import { Link, Head } from "@inertiajs/react";
 import LandingPage from "./Body/LandingPage";
-import BackToTopButton from "./BackToTop";
+import BackToTopButton from "./UserExperience/BackToTop";
 import Newsletter from "./Body/Niws";
 import Accordion from "./Body/Faq";
 import Testimoni from "./Body/Testimoni";

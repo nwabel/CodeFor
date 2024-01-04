@@ -1,7 +1,7 @@
 import Navbar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
-import TechCat from "@/Components/TechCat";
-import ProgrammingCat from "@/Components/ProgrammingCat";
+import TechCat from "@/Components/Blog/TechCat";
+import ProgrammingCat from "@/Components/Blog/ProgrammingCat";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "@inertiajs/react";
 
@@ -9,7 +9,7 @@ const SectionBlog = () => {
     return (
         <>
         <Navbar />
-            <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <div class="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                 
                 <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                     <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">

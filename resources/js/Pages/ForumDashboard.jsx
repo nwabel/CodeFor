@@ -29,6 +29,7 @@ export default function ForumDashboard(props) {
             <div className="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                 {/* <button onClick={fetchData}>Fetch Data</button> */}
                 {setNotif && props.flash.message}
+                <a className="inline-flex items-center gap-x-2 hover:text-gray-500  dark:text-blue-500 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/forums">Forums</a>
                 <div className="max-w-7xl mx-auto border rounded-lg bg-gray-50 p-5">
                     <div className="text-center">
                         <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">

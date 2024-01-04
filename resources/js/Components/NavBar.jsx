@@ -1,5 +1,5 @@
 import { Link, Head } from "@inertiajs/react";
-import ScrollProgress from "./ScrollProgress";
+import ScrollProgress from "./UserExperience/ScrollProgress";
 import 'preline';
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
             <header className="sticky top-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
                 <nav className="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
                     <div className="flex items-center justify-between">
-                        <a className="flex-none text-3xl font-semibold dark:text-white" href="/" aria-label="Brand" type="button"><span className="mb-11 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Code Fun.</span></a>
+                        <a className="flex-none text-3xl font-semibold dark:text-white" href="/" aria-label="Brand" type="button"><span className="mb-11 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">CodeFun.</span></a>
                         <div className="sm:hidden">
                             <button type="button" className="hs-collapse-toggle w-9 h-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
                                 <svg className="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">

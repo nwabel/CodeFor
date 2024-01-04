@@ -5,7 +5,7 @@ import "aos/dist/aos.css"
 
 
 const LandingPage = () => {
-    useEffect(()=> {
+    useEffect(() => {
         Aos.init({
             duration: 2000,
             mirror: true,
@@ -15,18 +15,18 @@ const LandingPage = () => {
     }, []);
 
     return (
-        
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 mb-10" data-aos="fade-in">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 mb-16 " data-aos="fade-in">
             <div class="pt-32 pb-12 md:pt-40 md:pb-20">
                 <div class="text-center pb-12 md:pb-16">
                     <h1 class="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"><span class="mb-11 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
-                            <TypeAnimation
+                        <TypeAnimation
                             sequence={[
                                 'CodeFun.'
                             ]}
                             speed={200}
-                            />
-                        </span><br />
+                        />
+                    </span><br />
                         <TypeAnimation
                             sequence={[
                                 'All in One Information Platform for Students.',
@@ -38,11 +38,11 @@ const LandingPage = () => {
                             ]}
                             speed={200}
                             repeat={Infinity}
-                            />
-                        </h1>
+                        />
+                    </h1>
                     <div class="max-w-3xl mx-auto">
                         <p class="text-xl text-gray-600 mb-8">
-                                Bingung cari informasi seputar kompetisi, bootcamp, workshop, seminar, webinar? Tenang aja, semua ada di Code Fun, pantengin terus biar ga ketinggalan infonya.
+                            Bingung cari informasi seputar kompetisi, bootcamp, workshop, seminar, webinar? Tenang aja, semua ada di Code Fun, pantengin terus biar ga ketinggalan infonya.
                         </p>
                         <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
                             <div>
