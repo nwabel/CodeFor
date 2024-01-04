@@ -11,7 +11,7 @@
 
 Code Fun -- Project Tugas Besar Mata Kuliag Web Programming.
 ### Deskripsi
-Code Fun merupakan forum pencarian informasi bootcamp, seminar, workshop, forum. Platform yang didedikasikan untuk pelajar, mahasiswa, guru, dosen, dan siapa pun itu.
+Code Fun merupakan platform pencarian informasi bootcamp, seminar, workshop, forum. Platform yang didedikasikan untuk pelajar, mahasiswa, guru, dosen, dan siapa pun itu.
 Code Fun menggunakan framework laravel breeze dengan react dan tailwind. 
 
 Code Fun adalah project dari kelompok CGN-CJR-SKB yang beranggotakan:
