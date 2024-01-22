@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Inertia } from "@inertiajs/inertia";
+import { Head, Link } from "@inertiajs/react";
 
 export default function ForumDashboard(props) {
     const [judul, setJudul] = useState("");
@@ -22,6 +23,12 @@ export default function ForumDashboard(props) {
         setNotif(true)
     }
 
+    useEffect(() => {
+        if(!props.myForum){
+            Inertia.get('/dashboardforums')
+        }
+        return;
+    },[])
     return (
         <>
 
@@ -29,7 +36,6 @@ export default function ForumDashboard(props) {
             <div className="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                 {/* <button onClick={fetchData}>Fetch Data</button> */}
                 {setNotif && props.flash.message}
-                <a className="inline-flex items-center gap-x-2 hover:text-gray-500  dark:text-blue-500 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/forums">Forums</a>
                 <div className="max-w-7xl mx-auto border rounded-lg bg-gray-50 p-5">
                     <div className="text-center">
                         <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
@@ -96,7 +102,7 @@ export default function ForumDashboard(props) {
                         {/* <!-- End Form --> */}
                     </div>
                 </div>
-
+                {console.log(props)}
                 <div className="mt-5">
                     <div class=" px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                         <p className="text-center font-bold text-3xl mb-5">Daftar Pertanyaanmu
@@ -196,123 +202,49 @@ export default function ForumDashboard(props) {
                                                 </tr>
                                             </thead>
 
-                                            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-                                                <tr class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800">
-                                                    <td class="h-px w-px whitespace-nowrap align-middle p-4">
-                                                        <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                                                            <div class="items-center justify-between mb-3 sm:flex">
-                                                                <span class="flex items-center justify-center bg-blue-100 rounded-full ring-white dark:ring-gray-900 dark:bg-blue-900">
-                                                                    <img class="rounded-full  w-8 h-8" src="https://drive.google.com/uc?export=view&id=12jvkjrSj0l__028gycCqy4hsW0l4HtEN" alt="Thomas Lean image" />
-                                                                </span>
-                                                                <time class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">sd</time>
-                                                                <div class="text-sm font-normal text-gray-500 lex dark:text-gray-300">sddsd<a href="#" class="font-semibold text-gray-900 dark:text-white hover:underline">jb</a></div>
-                                                            </div>
-                                                            <div class="p-3 text-sm italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">gv</div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="h-px w-px whitespace-nowrap align-top">
-                                                        <a class="flex justify-around block p-6" href="#">
-                                                            <span class="py-1 px-1.5 inline-flex justify-around gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                                                                <svg class="flex justify-around w-2.5 h-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                                </svg>
-                                                                Published
-                                                            </span>
-                                                        </a>
-                                                    </td>
-
-                                                    <td class="h-px w-px whitespace-nowrap align-top">
-                                                        <a class="block p-6" href="#">
-                                                            <div class="flex justify-center gap-x-3">
-                                                                <button type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-300 text-white hover:bg-green-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                                                    Update
-                                                                </button>
-                                                                <button type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                                                    Delete
-                                                                </button>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800">
-                                                    <td class="h-px w-px whitespace-nowrap align-middle p-4">
-                                                        <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                                                            <div class="items-center justify-between mb-3 sm:flex">
-                                                                <span class="flex items-center justify-center bg-blue-100 rounded-full ring-white dark:ring-gray-900 dark:bg-blue-900">
-                                                                    <img class="rounded-full  w-8 h-8" src="https://drive.google.com/uc?export=view&id=12jvkjrSj0l__028gycCqy4hsW0l4HtEN" alt="Thomas Lean image" />
-                                                                </span>
-                                                                <time class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">sd</time>
-                                                                <div class="text-sm font-normal text-gray-500 lex dark:text-gray-300">sddsd<a href="#" class="font-semibold text-gray-900 dark:text-white hover:underline">jb</a></div>
-                                                            </div>
-                                                            <div class="p-3 text-sm italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">gv</div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="h-px w-px whitespace-nowrap align-top">
-                                                        <a class="flex justify-around block p-6" href="#">
-                                                            <span class="py-1 px-1.5 inline-flex justify-around gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                                                                <svg class="flex justify-around w-2.5 h-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                                </svg>
-                                                                Published
-                                                            </span>
-                                                        </a>
-                                                    </td>
-
-                                                    <td class="h-px w-px whitespace-nowrap align-top">
-                                                        <a class="block p-6" href="#">
-                                                            <div class="flex justify-center gap-x-3">
-                                                                <button type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-300 text-white hover:bg-green-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                                                    Update
-                                                                </button>
-                                                                <button type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                                                    Delete
-                                                                </button>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800">
-                                                    <td class="h-px w-px whitespace-nowrap align-middle p-4">
-                                                        <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                                                            <div class="items-center justify-between mb-3 sm:flex">
-                                                                <span class="flex items-center justify-center bg-blue-100 rounded-full ring-white dark:ring-gray-900 dark:bg-blue-900">
-                                                                    <img class="rounded-full  w-8 h-8" src="https://drive.google.com/uc?export=view&id=12jvkjrSj0l__028gycCqy4hsW0l4HtEN" alt="Thomas Lean image" />
-                                                                </span>
-                                                                <time class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">sd</time>
-                                                                <div class="text-sm font-normal text-gray-500 lex dark:text-gray-300">sddsd<a href="#" class="font-semibold text-gray-900 dark:text-white hover:underline">jb</a></div>
-                                                            </div>
-                                                            <div class="p-3 text-sm italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">gv</div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="h-px w-px whitespace-nowrap align-top">
-                                                        <a class="flex justify-around block p-6" href="#">
-                                                            <span class="py-1 px-1.5 inline-flex justify-around gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                                                                <svg class="flex justify-around w-2.5 h-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                                </svg>
-                                                                Published
-                                                            </span>
-                                                        </a>
-                                                    </td>
-
-                                                    <td class="h-px w-px whitespace-nowrap align-top">
-                                                        <a class="block p-6" href="#">
-                                                            <div class="flex justify-center gap-x-3">
-                                                                <button type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-300 text-white hover:bg-green-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                                                    Update
-                                                                </button>
-                                                                <button type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                                                    Delete
-                                                                </button>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
+                                            {props.myForum.map((forum, i) =>{
+                                                return(
+                                                    <tbody key={i} class="divide-y divide-gray-200 dark:divide-gray-700">
+                                                        <tr class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800">
+                                                            <td class="h-px w-px whitespace-nowrap align-middle p-4">
+                                                                <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                                                                    <div class="items-center justify-between mb-3 sm:flex">
+                                                                        <span class="flex items-center justify-center bg-blue-100 rounded-full ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                                                            <img class="rounded-full  w-8 h-8" src="https://drive.google.com/uc?export=view&id=12jvkjrSj0l__028gycCqy4hsW0l4HtEN" alt="Thomas Lean image" />
+                                                                        </span>
+                                                                        <span class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">{forum.judul}</span>
+                                                                        <div class="text-sm font-normal text-gray-500 lex dark:text-gray-300">{forum.kategori}<a href="#" class="font-semibold text-gray-900 dark:text-white hover:underline">{forum.author}</a></div>
+                                                                    </div>
+                                                                    <div class="p-3 text-sm italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">{forum.deskripsi}</div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="h-px w-px whitespace-nowrap align-top">
+                                                                <a class="flex justify-around block p-6" href="#">
+                                                                    <span class="py-1 px-1.5 inline-flex justify-around gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+                                                                        <svg class="flex justify-around w-2.5 h-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                                                        </svg>
+                                                                        Published
+                                                                    </span>
+                                                                </a>               
+                                                            </td>
+                                                            <td class="h-px w-px whitespace-nowrap align-top">
+                                                                <a class="block p-6" href="#">
+                                                                    <div class="flex justify-center gap-x-3">
+                                                                        <Link href={route('edit.forum')} method="get" data={{id: forum.id}} type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-300 text-white hover:bg-green-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                                                            Update
+                                                                        </Link>
+                                                                        <Link href={route('delete.forum')} method="post" data={{id: forum.id}} type="button" class="py-3 px-4 inline-flex justify-around gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                                                            Delete
+                                                                        </Link>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                )})}
                                         </table>
                                         {/* <!-- End Table --> */}
-
                                         {/* <!-- Footer --> */}
                                         <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-gray-700">
                                             <div class="max-w-sm space-y-3">
@@ -350,8 +282,6 @@ export default function ForumDashboard(props) {
                 </div>
             </div>
             {/* <!-- End Hire Us --> */}
-
-
         </>
     )
 }

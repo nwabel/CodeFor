@@ -6,7 +6,6 @@ import ForumList from '@/Components/Forums/ForumList';
 import ScrollProgress from '@/Components/UserExperience/ScrollProgress';
 import BackToTopButton from '@/Components/UserExperience/BackToTop';
 import NewCard from '@/Components/Forums/StickyKonten/NewCard';
-// import Komen from '@/Components/Forums/Komen';
 
 export default function Forums({ auth, data}) {
     const completion = ScrollProgress();

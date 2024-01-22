@@ -123,7 +123,7 @@ export default function PromosiList() {
             {/* <!-- End Card Blog --> */}
             {/* <!-- Card Blog --> */}
             <div class="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-            <p className='text-xl text-gray-800 font-bold mb-6'>Bootcamp terbaik <span class="items-center gap-x-1.5 py-1.5 px-3 rounded-full bg-teal-100 text-teal-800 text-xl font-light">Terpopuler</span></p>
+            <p className='text-xl text-gray-800 font-bold mb-6'>Kompetisi terbaik <span class="items-center gap-x-1.5 py-1.5 px-3 rounded-full bg-teal-100 text-teal-800 text-xl font-light">Terpopuler</span></p>
                 {/* <!-- Grid --> */}
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* <!-- Card --> */}
@@ -243,7 +243,7 @@ export default function PromosiList() {
             {/* <!-- End Card Blog --> */}
             {/* <!-- Card Blog --> */}
             <div class="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-            <p className='text-xl text-gray-800 font-bold mb-6'>Bootcamp terbaik <span class="items-center gap-x-1.5 py-1.5 px-3 rounded-full bg-teal-100 text-teal-800 text-xl font-light">Terpopuler</span></p>
+            <p className='text-xl text-gray-800 font-bold mb-6'>Seminar terbaik <span class="items-center gap-x-1.5 py-1.5 px-3 rounded-full bg-teal-100 text-teal-800 text-xl font-light">Terpopuler</span></p>
                 {/* <!-- Grid --> */}
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* <!-- Card --> */}

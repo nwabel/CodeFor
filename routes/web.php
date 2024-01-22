@@ -36,10 +36,6 @@ Route::get('/dashboardadmin', function () {
     return Inertia::render('AdminDashboard');
 })->middleware(['auth', 'verified'])->name('dashboardadmin');
 
-Route::get('/dashboardforums', function(){
-    return Inertia::render('ForumDashboard');
-});
-
 Route::get('/blogpage', function(){
     return Inertia::render('BlogPage');
 });
@@ -59,6 +55,15 @@ Route::get('/roadmap', function(){
 Route::post('/forum', [ForumController::class, 'storeForum']);
 
 Route::get('/forums', [ForumController::class, 'index']);
+
+Route::get('/dashboardforums', [ForumController::class,'showForum'])->name('dashboardforums');
+
+Route::get('/forum/edit', [ForumController::class,'edit'])->middleware(['auth', 'verified'])->name('edit.forum');
+
+Route::post('/forum/update', [ForumController::class,'update'])->middleware(['auth', 'verified'])->name('update.forum');
+
+Route::post('/forum/delete', [ForumController::class,'destroy'])->middleware(['auth', 'verified'])->name('delete.forum');
+
 
 Route::get('/kompe', [KompetisiController::class, 'index']);
 
