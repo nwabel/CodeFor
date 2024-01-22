@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--GyLDDG8R--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/l2vicl71wmxtcgob0gu2.png" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -11,7 +11,7 @@
 
 Code Fun -- Project Tugas Besar Mata Kuliag Web Programming.
 ### Deskripsi
-Code Fun merupakan forum pencarian informasi bootcamp, seminar, workshop, forum. Platform yang didedikasikan untuk pelajar, mahasiswa, guru, dosen, dan siapa pun itu.
+Code Fun merupakan platform pencarian informasi bootcamp, seminar, workshop, forum. Platform yang didedikasikan untuk pelajar, mahasiswa, guru, dosen, dan siapa pun itu.
 Code Fun menggunakan framework laravel breeze dengan react dan tailwind. 
 
 Code Fun adalah project dari kelompok CGN-CJR-SKB yang beranggotakan:
